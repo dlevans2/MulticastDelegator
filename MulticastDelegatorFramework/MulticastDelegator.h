@@ -8,6 +8,8 @@
 
 @import Foundation;
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  @brief An object that holds a collection (set) of weak references to objects.
  
@@ -52,6 +54,8 @@
  
  @param invocation A block that takes in a non-null ObjectType to pass information from the MulticastDelegator to the ObjectType.
  */
-- (void)invokeDelegates:(void (^ __nonnull)(__nonnull ObjectType))invocation;
+- (void)invokeDelegates:(void (^)(ObjectType))invocation;
 
 @end
+
+NS_ASSUME_NONNULL_END

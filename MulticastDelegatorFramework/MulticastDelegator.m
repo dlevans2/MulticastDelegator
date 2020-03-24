@@ -50,7 +50,7 @@
     [self._delegates removeObject:delegate];
 }
 
-- (void)invokeDelegates:(void (^ __nonnull)(__nonnull id))invocation
+- (void)invokeDelegates:(void (^)(id))invocation
 {
     for (id delegate in self.delegates)
     {
